@@ -7,6 +7,7 @@
     "start": "parcel ./src/index.html --open",
     "lint:html": "linthtml src/**/*.html",
     "lint:css": "stylelint **/*.scss",
+    "lint:js": "eslint ./src",
     "lint": "concurrently \"npm run lint:html\" \"npm run lint:css\" \"npm run lint:js\""
   },
   "keywords": [],
@@ -15,9 +16,11 @@
   "devDependencies": {
     "@linthtml/linthtml": "^0.8.4",
     "@mate-academy/linthtml-config": "0.0.2",
+    "concurrently": "^6.5.1",
     "eslint": "^8.5.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
+    "husky": "^7.0.4",
     "parcel": "^1.12.3",
     "stylelint": "^14.2.0",
     "stylelint-config-standard-scss": "^3.0.0"
